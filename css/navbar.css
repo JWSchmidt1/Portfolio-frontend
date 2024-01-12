@@ -1,0 +1,44 @@
+nav {
+  width: 80%;
+  margin: 4rem auto;
+  position: absolute;
+  left: 5%;
+}
+nav li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 4rem;
+}
+nav a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #EEEEEE;
+  font-family: "Poppins", sans-serif;
+}
+nav li {
+  position: relative;
+}
+nav a {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 10px 10px;
+  position: relative;
+}
+nav a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: rgb(187, 185, 185);
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+nav a:hover:after {
+  width: 100%;
+  left: 0;
+}/*# sourceMappingURL=navbar.css.map */

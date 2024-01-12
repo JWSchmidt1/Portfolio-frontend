@@ -1,0 +1,32 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiperCon {
+  width: 80%;
+  height: 35%;
+  margin: 10% auto;
+}
+
+.swiper-slide {
+  border-radius: 15px;
+  background-size: cover;
+  transition: width 0.3s ease-in-out;
+
+}
+
+.active {
+  width: 25% !important;
+}
