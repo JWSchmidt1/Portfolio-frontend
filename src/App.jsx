@@ -2,9 +2,6 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 
 import './scss/style.scss';
 import Home from './pages/Home';
-import Portfolio from './pages/Portfolio';
-import About from './pages/About';
-import Contact from './pages/Contact';
 
 import DefaultLayout from './layout/DefaultLayout';
 import ScrollToTop from './components/ScrollToTop';
@@ -15,11 +12,6 @@ const router = createBrowserRouter(
       {/* PUBLIC */ }
       <Route path="/" element={ <DefaultLayout /> }>
         <Route index element={ <Home /> } />
-        <Route path="/portfolio" element={ <Portfolio /> } />
-        <Route path="/about" element={ <About /> } />
-        <Route path="/contact" element={ <Contact /> } />
-        {/* <Route path="login" element={ <Login /> } /> */ }
-        {/* <Route path="*" element={ <NotFound /> } /> */ }
       </Route>
 
       {/* ADMIN */ }

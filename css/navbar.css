@@ -1,31 +1,48 @@
-nav {
-  width: 80%;
-  margin: 4rem auto;
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono:400");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 100;
   position: absolute;
-  left: 5%;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
 }
-nav li {
+.navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6rem;
+  padding: 3rem 20rem;
+}
+.navigation li {
   list-style: none;
   display: inline-block;
-  margin-right: 4rem;
-}
-nav a {
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: #EEEEEE;
-  font-family: "Poppins", sans-serif;
-}
-nav li {
   position: relative;
-}
-nav a {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   display: inline-block;
-  padding: 10px 10px;
   position: relative;
+  padding: 1rem;
 }
-nav a:after {
+.navigation a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.navigation a::after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -33,12 +50,12 @@ nav a:after {
   height: 2px;
   left: 50%;
   position: absolute;
-  background: rgb(187, 185, 185);
+  background: white;
   -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-nav a:hover:after {
+.navigation a:hover::after {
   width: 100%;
   left: 0;
 }/*# sourceMappingURL=navbar.css.map */

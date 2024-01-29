@@ -1,0 +1,79 @@
+.accordion {
+  width: 100%;
+  padding: 3rem;
+}
+.accordion .panel {
+  background-color: #fff;
+  border-top: 1px solid black;
+}
+.accordion .panel:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.accordion .panel:last-child {
+  border-bottom: 1px solid black;
+}
+.accordion .panel__label {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 2.5rem 6rem 2.5rem 2.5rem;
+  font-weight: 1000;
+  font-size: calc(0.7em + 0.7vw);
+  font-family: inherit;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+.accordion .panel__label:focus {
+  outline: none;
+}
+.accordion .panel__label:after, .accordion .panel__label:before {
+  content: "";
+  position: absolute;
+  right: 2.5rem;
+  top: 50%;
+  width: 2.2rem;
+  height: 0.2rem;
+  margin-top: -0.2rem;
+  background-color: #000;
+}
+.accordion .panel__label:before {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: -webkit-transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1), -webkit-transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.accordion .panel[aria-expanded=true] .panel__content {
+  opacity: 1;
+}
+.accordion .panel[aria-expanded=true] .panel__label {
+  color: #000;
+}
+.accordion .panel[aria-expanded=true] .panel__label:before {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.accordion .panel__inner {
+  overflow: hidden;
+  will-change: height;
+  -webkit-transition: height 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: height 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.accordion .panel__content {
+  margin: 0.5rem 4rem 2.5rem;
+  font-size: calc(0.6em + 0.6vw);
+  font-weight: 600;
+  line-height: 3rem;
+  color: #000;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear 0.18s;
+  transition: opacity 0.3s linear 0.18s;
+}
+.accordion:not(:last-child) {
+  margin-bottom: 0.3rem;
+}/*# sourceMappingURL=accordion.css.map */

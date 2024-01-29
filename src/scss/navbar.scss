@@ -40,7 +40,7 @@
     cursor: pointer;
     // color: rgb(187, 185, 185);
     // color: #eeeeee;
-    color: black;
+    color: white;
     font-family: $font_main;
     // font-weight: 600;
   }
@@ -53,7 +53,7 @@
     left: 50%;
     position: absolute;
     // background: rgb(187, 185, 185);
-    background: black;
+    background: white;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }

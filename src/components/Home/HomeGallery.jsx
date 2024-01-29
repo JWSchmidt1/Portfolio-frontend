@@ -24,7 +24,7 @@ const HomeGallery = () => {
     const [ lightboxImages, setLightboxImages ] = useState( [] );
 
     useEffect( () => {
-        getData( "https://portfolio-backend-lqpa.onrender.com/gallery" );
+        getData( `${process.env.REACT_APP_APIKey}/gallery` );
         // getData( 'http://localhost:5333/gallery' );
     }, [] );
 
@@ -71,16 +71,11 @@ const HomeGallery = () => {
     }, [ lightbox ] );
 
     const image = lightboxImages.map( ( galleryImage, galleryIndex ) => ( {
-        //   original: `https://portfolio-backend-lqpa.onrender.com/images/gallery/${galleryImage}`,
-        //   thumbnail: `https://portfolio-backend-lqpa.onrender.com/images/gallery/${galleryImage}`,
         original: `${ process.env.REACT_APP_APIKey }/images/gallery/${ galleryImage }`,
         thumbnail: `${ process.env.REACT_APP_APIKey }/images/gallery/${ galleryImage }`,
         originalHeight: '700',
         disableSwipe: false
     } ) );
-
-    console.log( "image:", image );
-
 
     return (
         <div className='homeGalleryCon' id='portfolio'>
@@ -88,7 +83,7 @@ const HomeGallery = () => {
             { error && <ErrorMessage /> }
             { loading && <Loader /> }
 
-            <h2>PROJECTS</h2>
+            <h2>PROJECTS.</h2>
 
             <div className={ `newProjectsCon ${ showAll ? 'expanded' : '' }` }>
                 { data &&

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll';
 import logowhite from '../assets/images/logo/logo-white-short.png'
 import { FaLinkedin, FaGithubSquare } from 'react-icons/fa'
 
@@ -28,18 +28,6 @@ const Footer = () => {
                   <Link to={ e.path }>{ e.name }</Link>
                 </li>
               ) }
-            {/* <li>
-              <Link>Home</Link>
-            </li>
-            <li>
-              <Link>Home</Link>
-            </li>
-            <li>
-              <Link>Home</Link>
-            </li>
-            <li>
-              <Link>Home</Link>
-            </li> */}
           </ul>
         </nav>
       </div>
